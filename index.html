@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ATSC</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="css/w3themeblack.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body id="myPage">
+<style>
+div.first {
+  background: rgba(0, 128, 0, 0.1);
+}
+
+/* Main content */
+.hello {
+  margin-top: 30px; /* Add a top margin to avoid content overlay */
+}
+
+/* Image container */
+.image-box {
+  width: 40%; /* Adjust the width of the box */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 auto; /* Center the box */
+  border: 0px solid #ccc; /* Optional: add a border around the box */
+  padding: 10px; /* Optional: add padding inside the box */
+  
+}
+</style>
+
+<!-- Sidebar on click -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-teal">Close
+    <i class="fa fa-remove"></i>
+  </a>
+  <a href="#" class="w3-bar-item w3-button">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+  <a href="#" class="w3-bar-item w3-button">Link 4</a>
+  <a href="#" class="w3-bar-item w3-button">Link 5</a>
+</nav>
+
+<!-- Navbar -->
+<div class = "w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <!-- <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2"  onclick="openNav()"><i class="fa fa-bars"></i></a>
+   --><a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>ATSC</a>
+  <a href="#aboutus" class="w3-bar-item w3-button  w3-hover-white">About Us</a>
+  <a href="#team" class="w3-bar-item w3-button  w3-hover-white">Team</a>
+<!--   <a href="#work" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Team</a> -->  
+<a href="#Careers" class="w3-bar-item w3-button  w3-hover-white" >Careers</a>
+<a href="#contact" class="w3-bar-item w3-button  w3-hover-white" >Contact</a>
+  
+  <!-- <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a> -->
+ </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemso" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium" style="position: fixed;">
+    <a href="#aboutus" class="w3-bar-item w3-button">About Us</a>
+	<a href="#team" class="w3-bar-item w3-button">Team</a>
+    <!-- <a href="#work" class="w3-bar-item w3-button">Work</a>
+    <a href="#pricing" class="w3-bar-item w3-button">Price</a> -->
+    <a href="#Careers" class="w3-bar-item w3-button">Careers</a>
+    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    <!-- <a href="#" class="w3-bar-item w3-button">Search</a> -->
+
+  </div>
+</div>
+
+<!-- Image Header -->
+<div class="w3-display-container w3-animate-opacity w3-center hello">
+  <div class="image-box">
+    <img src="images/PP33.png" alt="boat" style="width:100%; height:auto;">
+  </div>
+</div>
+
+</body>
+</html>
+
+
+
+<div class="about-us" id="aboutus">
+  <h2>About us</h2>
+  <p>We are an IIT Bombay & IIT Gandhinagar backed early-age startup whose vision is to provide a hygiene washroom experience. We make innovative products for the autonomous cleaning in washrooms and keep them germ-free.</p>
+</div>
+<style>.about-us {
+  background-color: #b2dfdb;
+  padding: 32px;
+  text-align: center;
+  width: calc(100% ); /* Full width minus 3 cm margin on each side */
+  margin: 1cm auto 0; /* 1 cm below the toggle buttons */
+}</style>
+
+<!-- Team Container -->
+<div class="w3-container w3-padding-64 w3-center" id="team">
+  <h2>OUR TEAM</h2>
+  <p>Meet the team</p>
+
+  <div class="w3-row"><br>
+    <div class="w3-half">
+      <img src="images/anurag.jpg" alt="Anurag Agrawal" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h3>Anurag Agrawal</h3>
+      <p>CTO, IIT Bombay Alumni</p>
+    </div>
+    <div class="w3-half">
+      <img src="images/renuka.jpeg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h3>Renuka</h3>
+      <p>CEO, IIT Bombay Alumni</p>
+  </div>
+</div>
+</div>
+
+<!DOCTYPE html>
+<html>
+<head>    
+    <div class="Careers" id="Careers"></div>
+    <title>Careers Section</title>
+    <style>
+        /* Global styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body, html {
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        .w3-container {
+            padding: 64px;
+            text-align: center;
+        }
+
+        .w3-row {
+            margin-top: 20px;
+        }
+
+        .w3-quarter {
+            width: 24%;
+            margin: 1%;
+        }
+
+        .job-section img {
+            width: 4cm;
+            height: 4cm;
+            border-radius: 50%;
+        }
+
+        .job-section h3 {
+            font-size: 18px;
+            margin: 10px 0; /* Add margin to separate the title from the image */
+        }
+
+        .w3-button {
+            background-color: #008080;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px; /* Add margin to separate the button from the text */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .w3-quarter {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .job-section h3 {
+                margin: 10px 0;
+            }
+
+            .w3-button {
+                margin-top: 15px; /* Increase margin to add space between button and image */
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Careers and Contact</title>
+        <style>
+            /* Global styles */
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+    
+            body, html {
+                height: 100%;
+                overflow-x: hidden;
+                font-family: Arial, sans-serif;
+            }
+    
+            .w3-container {
+                padding: 64px;
+                text-align: center;
+            }
+    
+            .w3-row {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+    
+            .w3-quarter {
+                flex: 1;
+                min-width: 200px;
+                max-width: 25%;
+                padding: 15px;
+                box-sizing: border-box;
+            }
+    
+            .job-section img {
+                width: 4cm;
+                height: 4cm;
+                border-radius: 50%;
+            }
+    
+            .job-section h3 {
+                font-size: 18px;
+                margin: 20px 0;
+            }
+    
+            .w3-button {
+                background-color: #008080;
+                color: white;
+                padding: 10px 20px;
+                text-decoration: none;
+                display: inline-block;
+                margin-top: 20px;
+            }
+    
+            .first {
+                background-color: white;
+            }
+    
+            .fa {
+                margin-right: 10px;
+            }
+    
+            footer {
+                background-color: #00695c;
+                color: white;
+                padding: 32px;
+            }
+    
+            .w3-text-teal {
+                color: #008080 !important;
+            }
+    
+            /* Responsive adjustments */
+            @media (max-width: 768px) {
+                .w3-quarter {
+                    max-width: 100%;
+                    margin-bottom: 20px;
+                }
+    
+                .w3-button {
+                    margin-top: 15px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+    
+    <!-- Careers Container -->
+    <div class="w3-container w3-padding-64 w3-center" id="careers" style="background-color: #b2dfdb;">
+      <h2>CAREERS</h2>
+      <p>Join our team and make an impact.</p>
+      <div class="w3-row"><br>
+          <div class="w3-quarter job-section">
+              <img src="images/CAD DESIGNER.webp" alt="CAD Designer" class="w3-hover-opacity">
+              <h3>CAD Designer</h3>
+              <a href="CAD DESIGNER.html" class="w3-button w3-teal">Learn More</a>
+          </div>
+          <div class="w3-quarter job-section">
+              <img src="images/research intern.jpg" alt="Super-hydrophobic Research Engineer" class="w3-hover-opacity">
+              <h3>Research Engineer</h3>
+              <a href="RESEARCH ENGINEER.html" class="w3-button w3-teal">Learn More</a>
+          </div>
+          <div class="w3-quarter job-section">
+              <img src="images/Electrical engineer.webp" alt="Electrical Engineer" class="w3-hover-opacity">
+              <h3>Electrical Engineer</h3>
+              <a href="ELECTRICAL ENGINEER.html" class="w3-button w3-teal">Learn More</a>
+          </div>
+          <div class="w3-quarter job-section">
+              <img src="images/system engineer.jpg" alt="System Engineer" class="w3-hover-opacity">
+              <h3>System Engineer</h3>
+              <a href="SYSTEM ENGINEER.html" class="w3-button w3-teal">Learn More</a>
+          </div>
+      </div>
+    </div>
+    
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Contact Us</title>
+        <!-- Add W3.CSS stylesheet -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <!-- Add Font Awesome for icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            /* Add any custom styles if needed */
+        </style>
+    </head>
+    <body>
+    
+    <!-- Contact Container -->
+    <div class="first" style="background-color: white;">
+        <div class="w3-container w3-padding-64 w3-center" id="contact">
+            <h2>CONTACT US</h2>
+            <p>Swing by for a cup of tea, or whatever.</p>
+            <div class="w3-row">
+                <div>
+                    <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i> Ahmedabad, India</p>
+                    <p><i class="fa fa-phone w3-text-teal w3-xlarge"></i> +91 7021042407</p>
+                    <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i> core.atsc@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Follow Us Section -->
+    <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+        <h4>Follow Us</h4>
+        <a class="w3-button w3-large w3-teal" href="https://www.facebook.com/garuna49" title="Facebook"><i class="fa fa-facebook"></i></a>
+        <a class="w3-button w3-large w3-teal" href="https://www.linkedin.com/company/atsc49" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+    </footer>
+    
+    <script>
+    // Script for side navigation
+    function w3_open() {
+      var x = document.getElementById("mySidebar");
+      x.style.width = "300px";
+      x.style.paddingTop = "10%";
+      x.style.display = "block";
+    }
+    
+    // Close side navigation
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+    
+    // Used to toggle the menu on smaller screens when clicking on the menu button
+    function openNav() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+      } else {
+          x.className = x.className.replace(" w3-show", "");
+      }
+    }
+    </script>
+    
+    </body>
+    </html>
+    
