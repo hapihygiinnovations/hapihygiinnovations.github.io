@@ -41,7 +41,7 @@
   width: auto;
   height: 85%;
   max-width: auto%;
-  animation: fadeIn 0.2s; /* Example animation */
+  animation: fadeIn 2s; /* Example animation */
 }
 
 @keyframes fadeIn {
