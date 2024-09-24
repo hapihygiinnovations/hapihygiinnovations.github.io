@@ -76,7 +76,7 @@
 
 @media (max-width: 450px) {
   .responsive-container {
-    padding-top: 30%; /* Adjust padding for smaller screens */
+    padding-top: 25%; /* Adjust padding for smaller screens */
 	padding-bottom: 10%; /* Adjust padding for smaller screens */
   }
   
