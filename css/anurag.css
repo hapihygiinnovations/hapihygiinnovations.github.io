@@ -1,0 +1,31 @@
+.contact-center {
+            display: flex;
+           flex-direction: column; /* Stack items vertically */
+            align-items: center;    /* Center horizontally */
+            justify-content: center; /* Center vertically */
+            /*height: 100vh;         /* Full viewport height */
+            text-align: left;     /* Center text */
+            /*padding: 64px 16px;    /* Add padding */
+        }
+		
+		
+.about-text {
+    margin: 0 auto; /* Center the text */
+    max-width: 80%; /* Use a percentage for maximum width */
+    padding: 0 4%; /* Use percentage for padding */
+    text-align: justify; /* Keep text aligned to the justify */
+    /*font-size: 1.5vw; /* Use viewport width for font size */
+}
+
+
+.team-img {
+    max-width: 100%; /* Ensure images scale down */
+    height: auto; /* Maintain aspect ratio */
+    width: 45%; /* Use percentage for width */
+}
+
+.career-img {
+    max-width: 100%; /* Ensure images scale down */
+    height: 25%; 
+    width: 45%; /* Use percentage for width */
+}
