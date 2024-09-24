@@ -29,3 +29,37 @@
     height: 25%; 
     width: 45%; /* Use percentage for width */
 }
+
+.responsive-container {
+  max-width: 100%;
+  overflow: hidden;
+  text-align: center; /* Center the image if desired */
+  padding-top: 8vh; /* Responsive padding based on viewport height */
+}
+
+.responsive-image {
+  width: auto;
+  height: 85%;
+  max-width: auto%;
+  animation: fadeIn 0.2s; /* Example animation */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+/* Media query for medium to large screens */
+@media (max-width: 1024px) {
+  .responsive-container {
+    padding-top: 10vh; /* Adjust padding for medium screens */
+  }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  .responsive-container {
+    padding-top: 15vh; /* Adjust padding for smaller screens */
+  }
+}
