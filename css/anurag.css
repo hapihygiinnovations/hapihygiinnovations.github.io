@@ -62,4 +62,10 @@
   .responsive-container {
     padding-top: 15vh; /* Adjust padding for smaller screens */
   }
+  
+  .responsive-image{
+	 width: auto;
+	 height: 65%;
+	 max-width: 50%; 
+  }
 }
