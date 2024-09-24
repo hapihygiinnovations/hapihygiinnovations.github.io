@@ -40,7 +40,7 @@
 .responsive-image {
   width: auto;
   height: 85%;
-  max-width: auto%;
+  max-width: 50%;
   animation: fadeIn 2s; /* Example animation */
 }
 
