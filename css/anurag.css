@@ -60,12 +60,13 @@
 /* Media query for smaller screens */
 @media (max-width: 600px) {
   .responsive-container {
-    padding-top: 15vh; /* Adjust padding for smaller screens */
+    padding-top: 30%; /* Adjust padding for smaller screens */
+	padding-bottom: 15% /* Adjust padding for smaller screens */
   }
   
   .responsive-image{
 	 width: auto;
 	 height: 65%;
-	 max-width: 60%; 
+	 max-width: 100%; 
   }
 }
