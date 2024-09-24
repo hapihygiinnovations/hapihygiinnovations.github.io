@@ -35,11 +35,12 @@
   overflow: hidden;
   text-align: center; /* Center the image if desired */
   padding-top: 8vh; /* Responsive padding based on viewport height */
+  padding-bottom: 5vh; /* Responsive padding based on viewport height */
 }
 
 .responsive-image {
   width: auto;
-  height: 85%;
+  height: 90%;
   max-width: 50%;
   animation: fadeIn 2s; /* Example animation */
 }
