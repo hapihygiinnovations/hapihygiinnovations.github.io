@@ -39,9 +39,9 @@
 }
 
 .responsive-image {
-  width: auto;
-  height: 92%;
-  max-width: 50%;
+  width: 30%;
+  height: 85%;
+  max-width: auto;
   animation: fadeIn 2s; /* Example animation */
 }
 
