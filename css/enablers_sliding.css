@@ -1,0 +1,51 @@
+  .slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .slider-track {
+    display: flex;
+    transition: transform 0.8s ease-in-out;
+  }
+
+  .slide {
+    flex: 0 0 25%; /* Show 4 images at once */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slide img {
+    width: 80%;
+    max-width: 150px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* Dots */
+  .dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+    gap: 8px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .dot.active {
+    background-color: #333;
+  }
+
+  @media (max-width: 768px) {
+    .slide {
+      flex: 0 0 50%;
+    }
+  }

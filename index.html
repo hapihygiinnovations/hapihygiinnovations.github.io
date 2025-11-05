@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="css/w3.css">
 <link rel="stylesheet" href="css/w3themeblack.css">
 <link rel="stylesheet" href="css/anurag.css">
+<link rel="stylesheet" href="css/enablers_sliding.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
@@ -150,8 +151,41 @@ div.first {
 </div>
 
 
-<!-- Careers Container w3-padding-64 -->
+
+
+
+
+<!-- Team Container w3-padding-64 -->
 <div class = "first">
+	<div class="w3-container  w3-center pad-top pad-bottom" id="team">
+		<h2>OUR ENABLERS</h2>
+		<p></p>
+		<br>
+		<br>
+		
+		<div class="slider-container">
+		  <div class="slider-track" id="sliderTrack">
+			<div class="slide"><img src="images/sine.png" alt="SINE"></div>
+			<div class="slide"><img src="images/iimk.png" alt="IIMK"></div>
+			<div class="slide"><img src="images/saushtra.png" alt="Saushtra"></div>
+			<div class="slide"><img src="images/gusec.png" alt="GUSEC"></div>
+			<div class="slide"><img src="images/savli.png" alt="Savli"></div>
+			<div class="slide"><img src="images/ihub.png" alt="iHub"></div>
+			<div class="slide"><img src="images/cradle.png" alt="Cradle"></div>
+			<div class="slide"><img src="images/vit.png" alt="VIT"></div>
+		  </div>
+		</div>
+		
+		<!-- Navigation dots -->
+		<div class="dots" id="dotsContainer"></div>
+		
+	</div>
+</div>	
+
+
+
+<!-- Careers Container w3-padding-64 -->
+<div class = "second">
 	<div class="w3-container  w3-center pad-top pad-bottom" id="career">
 		<h2>CAREERS</h2>
 		<p>Join our team and make an impact </p>
@@ -198,22 +232,11 @@ div.first {
 </div>	
 
 
-<!-- Service Container -->
-
-<!--
-<div class="w3-container w3-padding-64 w3-center" id="aboutus">
-
-	<h2>Services</h2>
-	<div >
-		<p class="about-text"> We specialize in 3D printing services designed to support innovators in bringing their ideas to life. We offer custom printing of high-quality PLA parts, rapid prototyping to accelerate your development process, and design consultation to optimize your models for printing. Our services also include small-batch production and post-processing to enhance the final finish of your parts. Whether you’re looking for a single prototype or a series of components, we’re here to help you every step of the way.</p>
-	</div>
 
 
-</div>
--->
 
 <!-- Contact Container  --> 
-<div class = "second">
+<div class = "first">
 	<div class="w3-container w3-padding-64 w3-center" id="contact">
 	<h2>CONTACT US</h2>
 	<p>Swing by for a cup of tea, or whatever.</p>
@@ -296,5 +319,8 @@ function openNav() {
 }
 </script>
 
+<script src="js/enabler_slider.js"></script>
+
 </body>
 </html>
+
