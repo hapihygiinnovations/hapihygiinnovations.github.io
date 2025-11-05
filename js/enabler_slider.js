@@ -1,18 +1,18 @@
-const track = document.getElementById("sliderTrack");
-  const slides = document.querySelectorAll(".slide");
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.getElementById("partnerSliderTrack");
+  const slides = document.querySelectorAll(".partner-slide");
   const totalSlides = slides.length;
-  const slidesPerView = 4;
-  const slideInterval = 3000; // 3 seconds
+  const slideInterval = 3000;
   let index = 0;
 
-  // Duplicate all slides for smooth infinite loop
+  // Duplicate slides for smooth looping
   track.innerHTML += track.innerHTML;
 
   // Create dots
-  const dotsContainer = document.getElementById("dotsContainer");
+  const dotsContainer = document.getElementById("partnerDots");
   for (let i = 0; i < totalSlides; i++) {
     const dot = document.createElement("div");
-    dot.classList.add("dot");
+    dot.classList.add("partner-dot");
     if (i === 0) dot.classList.add("active");
     dot.addEventListener("click", () => {
       index = i;
@@ -21,11 +21,19 @@ const track = document.getElementById("sliderTrack");
     });
     dotsContainer.appendChild(dot);
   }
-  const dots = document.querySelectorAll(".dot");
+
+  const dots = document.querySelectorAll(".partner-dot");
+
+  function slidesPerView() {
+    return window.innerWidth <= 768 ? 1 : 4;
+  }
 
   function updateSlider() {
+    const spv = slidesPerView();
+    const shiftPercent = 100 / spv;
     track.style.transition = "transform 0.8s ease-in-out";
-    track.style.transform = `translateX(-${index * 25}%)`;
+    track.style.transform = `translateX(-${index * shiftPercent}%)`;
+
     dots.forEach(dot => dot.classList.remove("active"));
     dots[index % totalSlides].classList.add("active");
   }
@@ -33,7 +41,6 @@ const track = document.getElementById("sliderTrack");
   function nextSlide() {
     index++;
     updateSlider();
-    // When we reach the cloned set, reset smoothly
     if (index >= totalSlides) {
       setTimeout(() => {
         track.style.transition = "none";
@@ -49,3 +56,6 @@ const track = document.getElementById("sliderTrack");
   }
 
   let autoSlide = setInterval(nextSlide, slideInterval);
+
+  window.addEventListener("resize", updateSlider);
+});

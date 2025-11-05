@@ -1,51 +1,57 @@
-  .slider-container {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-  }
+.partner-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+}
 
-  .slider-track {
-    display: flex;
-    transition: transform 0.8s ease-in-out;
-  }
+.partner-slider-container {
+  overflow: hidden;
+}
 
-  .slide {
-    flex: 0 0 25%; /* Show 4 images at once */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.partner-slider-track {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+}
 
-  .slide img {
-    width: 80%;
-    max-width: 150px;
-    height: auto;
-    object-fit: contain;
-  }
+.partner-slide {
+  flex: 0 0 calc(100% / 4); /* 4 on desktop */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  /* Dots */
-  .dots {
-    display: flex;
-    justify-content: center;
-    margin-top: 12px;
-    gap: 8px;
-  }
+.partner-slide img {
+  width: 80%;
+  max-width: 150px;
+  height: auto;
+  object-fit: contain;
+}
 
-  .dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #ccc;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
+/* Dots */
+.partner-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+  gap: 8px;
+}
 
-  .dot.active {
-    background-color: #333;
-  }
+.partner-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 
-  @media (max-width: 768px) {
-    .slide {
-      flex: 0 0 50%;
-    }
+.partner-dot.active {
+  background-color: #333;
+}
+
+/* On smaller screens: show 1 image only */
+@media (max-width: 768px) {
+  .partner-slide {
+    flex: 0 0 100%;
   }
+}
