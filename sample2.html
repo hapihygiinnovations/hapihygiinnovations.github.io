@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smooth Auto Sliding Partner Logos</title>
+<style>
+  .slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .slider-track {
+    display: flex;
+    transition: transform 0.8s ease-in-out;
+  }
+
+  .slide {
+    flex: 0 0 25%; /* Show 4 images at once */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slide img {
+    width: 80%;
+    max-width: 150px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* Dots */
+  .dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+    gap: 8px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .dot.active {
+    background-color: #333;
+  }
+
+  @media (max-width: 768px) {
+    .slide {
+      flex: 0 0 50%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="slider-container">
+  <div class="slider-track" id="sliderTrack">
+    <div class="slide"><img src="images/sine.png" alt="SINE"></div>
+    <div class="slide"><img src="images/iimk.png" alt="IIMK"></div>
+    <div class="slide"><img src="images/saushtra.png" alt="Saushtra"></div>
+    <div class="slide"><img src="images/gusec.png" alt="GUSEC"></div>
+    <div class="slide"><img src="images/savli.png" alt="Savli"></div>
+    <div class="slide"><img src="images/ihub.png" alt="iHub"></div>
+    <div class="slide"><img src="images/cradle.png" alt="Cradle"></div>
+    <div class="slide"><img src="images/vit.png" alt="VIT"></div>
+  </div>
+</div>
+
+<div class="dots" id="dotsContainer"></div>
+
+<script>
+  const track = document.getElementById("sliderTrack");
+  const slides = document.querySelectorAll(".slide");
+  const totalSlides = slides.length;
+  const slidesPerView = 4;
+  const slideInterval = 3000; // 3 seconds
+  let index = 0;
+
+  // Duplicate all slides for smooth infinite loop
+  track.innerHTML += track.innerHTML;
+
+  // Create dots
+  const dotsContainer = document.getElementById("dotsContainer");
+  for (let i = 0; i < totalSlides; i++) {
+    const dot = document.createElement("div");
+    dot.classList.add("dot");
+    if (i === 0) dot.classList.add("active");
+    dot.addEventListener("click", () => {
+      index = i;
+      updateSlider();
+      resetInterval();
+    });
+    dotsContainer.appendChild(dot);
+  }
+  const dots = document.querySelectorAll(".dot");
+
+  function updateSlider() {
+    track.style.transition = "transform 0.8s ease-in-out";
+    track.style.transform = `translateX(-${index * 25}%)`;
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[index % totalSlides].classList.add("active");
+  }
+
+  function nextSlide() {
+    index++;
+    updateSlider();
+    // When we reach the cloned set, reset smoothly
+    if (index >= totalSlides) {
+      setTimeout(() => {
+        track.style.transition = "none";
+        index = 0;
+        track.style.transform = `translateX(0)`;
+      }, 800);
+    }
+  }
+
+  function resetInterval() {
+    clearInterval(autoSlide);
+    autoSlide = setInterval(nextSlide, slideInterval);
+  }
+
+  let autoSlide = setInterval(nextSlide, slideInterval);
+</script>
+
+</body>
+</html>
